@@ -74,7 +74,8 @@ export default function SearchWeather() {
         if(!/[^a-zA-Z]/.test(input)){
             alert("Invalid name");
         }
-        setSearch(input);
+        else{
+        setSearch(input);}
     }
 
     return (
