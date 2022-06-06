@@ -14,6 +14,9 @@ export default function SearchWeather() {
             if(componentMounted){
                 setData(await response.json());
             }
+            if(!/[^a-zA-Z]/.test(search)){
+                alert("Invalid name");
+            }
             return() =>{
                 componentMounted=false;
             }
@@ -68,6 +71,7 @@ export default function SearchWeather() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+       
         setSearch(input);
     }
 
