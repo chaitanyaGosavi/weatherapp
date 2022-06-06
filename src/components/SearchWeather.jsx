@@ -71,11 +71,8 @@ export default function SearchWeather() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(!/[^a-zA-Z]/.test(input)){
-            alert("Invalid name");
-        }
-        else{
-        setSearch(input);}
+       
+        setSearch(input);
     }
 
     return (
