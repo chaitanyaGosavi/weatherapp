@@ -13,7 +13,6 @@ export default function SearchWeather() {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=11241f73a5563aab5b4b310cce5771d4`);
             if(componentMounted){
                 setData(await response.json());
-                console.log(data)
             }
             return() =>{
                 componentMounted=false;
